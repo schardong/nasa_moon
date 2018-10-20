@@ -1,0 +1,102 @@
+PDS_VERSION_ID                 = PDS3
+DD_VERSION_ID                  = PDSCAT1R65
+LABEL_REVISION_NOTE            = "2011-02-10, David E. Kaufmann (SwRI), V1.0;"
+
+/* FILE CHARACTERISTIC DATA ELEMENTS */
+
+DATA_FORMAT                    = PDS
+FILE_NAME                      = "LAMP_80s_240mpp_ratio_brite_01.img"
+FILE_RECORDS                   = 2501
+RECORD_TYPE                    = FIXED_LENGTH
+RECORD_BYTES                   = 10004
+
+/* DATA OBJECT POINTERS */
+
+^IMAGE                         = "LAMP_80s_240mpp_ratio_brite_01.img"
+
+/* IDENTIFICATION DATA ELEMENTS */
+
+DATA_SET_ID                    = "LRO-L-LAMP-5-GDR-V1.0"
+INSTRUMENT_HOST_NAME           = "LUNAR RECONNAISSANCE ORBITER"
+INSTRUMENT_NAME                = "LYMAN ALPHA MAPPING PROJECT"
+PRODUCT_CREATION_TIME          = 2011-02-15T00:00:00
+PRODUCT_ID                     = "LAMP_80s_240mpp_ratio_brite_01.img"
+PRODUCT_VERSION_ID             = 1.0
+SOURCE_PRODUCT_ID              = "N/A"
+SPACECRAFT_CLOCK_START_COUNT   = "273456000.0"
+SPACECRAFT_CLOCK_STOP_COUNT    = "307584000.0"
+START_TIME                     = 2009-09-01T00:00:00
+STOP_TIME                      = 2010-10-01T00:00:00
+TARGET_NAME                    = "MOON"
+
+/* DESCRIPTIVE DATA ELEMENTS */
+
+DATA_SET_NAME                  = "LRO MOON LAMP 5 GRIDDED DATA RECORD V1.0"
+INSTRUMENT_HOST_ID             = "LRO"
+INSTRUMENT_ID                  = "LAMP"
+INSTRUMENT_TYPE                = "SPECTROGRAPH"
+MISSION_ID                     = "LRO"
+MISSION_NAME                   = "LUNAR RECONNAISSANCE ORBITER"
+MISSION_PHASE_NAME             = "NOMINAL MISSION"
+PRODUCER_FULL_NAME             = "DAVID E. KAUFMANN"
+PRODUCER_ID                    = "LRO_LAMP"
+PRODUCER_INSTITUTION_NAME      = "SOUTHWEST RESEARCH INSTITUTE"
+PRODUCT_TYPE                   = "GDR" /* CODMAC Data Level 5 */
+SOFTWARE_NAME                  = "LAMP-MAPTOOLEXEC"
+SOFTWARE_VERSION_ID            = "0.1"
+SPACECRAFT_NAME                = "LUNAR RECONNAISSANCE ORBITER"
+TARGET_DESC                    = "MOON"
+TARGET_TYPE                    = "SATELLITE"
+MINIMUM_WAVELENGTH             = "N/A"
+MAXIMUM_WAVELENGTH             = "N/A"
+
+/* DATA OBJECT DEFINITIONS */
+
+OBJECT                         = IMAGE
+  SAMPLE_BITS                  = 32
+  SAMPLE_TYPE                  = PC_REAL
+  AXIS_ORDER_TYPE              = FIRST_INDEX_FASTEST
+  LINE_DISPLAY_DIRECTION       = UP
+  SAMPLE_DISPLAY_DIRECTION     = RIGHT
+  LINE_SAMPLES                 = 2501
+  LINES                        = 2501
+  INTERCHANGE_FORMAT           = BINARY
+  OFFSET                       = 0
+  SCALING_FACTOR               = 1.00000
+  DESCRIPTION                  = "
+    Each sample represents off-band to on-band brightness ratio as a
+    dimensionless fraction."
+END_OBJECT                     = IMAGE
+
+OBJECT                         = IMAGE_MAP_PROJECTION
+  ^DATA_SET_MAP_PROJECTION     = "DSMAP_POLAR.CAT"
+  MAP_PROJECTION_TYPE          = "POLAR STEREOGRAPHIC"
+  KEYWORD_LATITUDE_TYPE        = "PLANETOCENTRIC"
+  MAP_RESOLUTION               = 126.347 <pix/deg>
+  A_AXIS_RADIUS                = 1737.4 <km>
+  B_AXIS_RADIUS                = 1737.4 <km>
+  C_AXIS_RADIUS                = 1737.4 <km>
+  FIRST_STANDARD_PARALLEL      = "N/A"
+  SECOND_STANDARD_PARALLEL     = "N/A"
+  POSITIVE_LONGITUDE_DIRECTION = "EAST"
+  CENTER_LATITUDE              = -90 <deg>
+  CENTER_LONGITUDE             = 0 <deg>
+  REFERENCE_LATITUDE           = "N/A"
+  REFERENCE_LONGITUDE          = "N/A"
+  LINE_FIRST_PIXEL             = 1
+  LINE_LAST_PIXEL              = 2501
+  SAMPLE_FIRST_PIXEL           = 1
+  SAMPLE_LAST_PIXEL            = 2501
+  MAP_PROJECTION_ROTATION      = 0.0
+  MAP_SCALE                    = 240 <m/pix>
+  MAXIMUM_LATITUDE             = -80 <deg>
+  MINIMUM_LATITUDE             = -90 <deg>
+  WESTERNMOST_LONGITUDE        = "N/A"
+  EASTERNMOST_LONGITUDE        = "N/A"
+  LINE_PROJECTION_OFFSET       = 1250 <pixel>
+  SAMPLE_PROJECTION_OFFSET     = 1250 <pixel>
+  COORDINATE_SYSTEM_TYPE       = "BODY-FIXED ROTATING"
+  COORDINATE_SYSTEM_NAME       = "MEAN EARTH/POLAR AXIS OF DE421"
+END_OBJECT                     = IMAGE_MAP_PROJECTION
+
+END
