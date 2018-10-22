@@ -17,7 +17,7 @@ It has ben hypothesized that the Moon's poles may contain increased ammounts of 
 
 We start the planning by finding a suitable landing site for the ship. Such a landing site must obey two conditions: (i) Low slope; (ii) High probability of water near the site. The first condition is met by calculating the difference in height at every possible landing site in between parallels 75S to 90S. The second condition uses results published recently by Li *et al.* (2018), combined with data made publicly available by NASA.
 
-We used the LOLA elevation and albedo maps [3, 4] and LAMP off and on band radio data [5] to calculate the probability of exposed ice water being present in a given region. We built upon the results of Li *et al.* (2018).
+We used the LOLA elevation and albedo maps [3, 4] and LAMP off and on band radio data [5] to calculate the probability of exposed ice water being present in a given region. We built upon the results of Li *et al.* (2018), using their criteria for albedo (> 0.35) and LAMP (> 1.2) we built a mask to filter the south pole data. Then, we convert the rover's radius of action plus 4km (taken from Apollo 17 mission data) to pixel units, build a mask which is convolved with the mask. The result of this convolution is a map with probabilities of exposed ice water being present.
 
 ### Gauging possible routes
 
@@ -34,8 +34,6 @@ After selecting a landing site, the user may specify an amount of charges he or 
 
 
 ## Results
-
-[]
 
 
 ## References
